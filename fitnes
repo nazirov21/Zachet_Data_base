@@ -1,0 +1,283 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: localhost    Database: fitnes_palagin
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `achievements`
+--
+
+DROP TABLE IF EXISTS `achievements`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `achievements` (
+  `id_achievements` int NOT NULL AUTO_INCREMENT,
+  `Наименование` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_achievements`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `achievements`
+--
+
+LOCK TABLES `achievements` WRITE;
+/*!40000 ALTER TABLE `achievements` DISABLE KEYS */;
+INSERT INTO `achievements` VALUES (1,'1 место в тяжелой атлетике в 2008 году'),(2,'мастер боевых исскуств');
+/*!40000 ALTER TABLE `achievements` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `clients`
+--
+
+DROP TABLE IF EXISTS `clients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clients` (
+  `id_Clients` int NOT NULL AUTO_INCREMENT,
+  `размер скидки` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Clients`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clients`
+--
+
+LOCK TABLES `clients` WRITE;
+/*!40000 ALTER TABLE `clients` DISABLE KEYS */;
+INSERT INTO `clients` VALUES (1,'5%'),(2,'1%');
+/*!40000 ALTER TABLE `clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `complite study`
+--
+
+DROP TABLE IF EXISTS `complite study`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `complite study` (
+  `id_Complite Study` int NOT NULL AUTO_INCREMENT,
+  `Назначенная Дата` varchar(128) NOT NULL,
+  `Выполнено` varchar(128) NOT NULL,
+  `Показатель пульса` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Complite Study`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `complite study`
+--
+
+LOCK TABLES `complite study` WRITE;
+/*!40000 ALTER TABLE `complite study` DISABLE KEYS */;
+INSERT INTO `complite study` VALUES (1,'12.09.22','все ','98'),(2,'14.08.22','частично','120');
+/*!40000 ALTER TABLE `complite study` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cours of stydy`
+--
+
+DROP TABLE IF EXISTS `cours of stydy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cours of stydy` (
+  `id_Cours Of Stydy` int NOT NULL AUTO_INCREMENT,
+  `Наименование` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Cours Of Stydy`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cours of stydy`
+--
+
+LOCK TABLES `cours of stydy` WRITE;
+/*!40000 ALTER TABLE `cours of stydy` DISABLE KEYS */;
+INSERT INTO `cours of stydy` VALUES (1,'как правильно делать пресс'),(2,'техника безопасности');
+/*!40000 ALTER TABLE `cours of stydy` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `exerсises`
+--
+
+DROP TABLE IF EXISTS `exerсises`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `exerсises` (
+  `id_Exesrise` int NOT NULL AUTO_INCREMENT,
+  `Наименование` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Exesrise`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `exerсises`
+--
+
+LOCK TABLES `exerсises` WRITE;
+/*!40000 ALTER TABLE `exerсises` DISABLE KEYS */;
+INSERT INTO `exerсises` VALUES (1,'20 отжиманий 30 приседаний'),(2,'50 пресс 5 берпи');
+/*!40000 ALTER TABLE `exerсises` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `individual study`
+--
+
+DROP TABLE IF EXISTS `individual study`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `individual study` (
+  `id_Individual Study` int NOT NULL AUTO_INCREMENT,
+  `Количество подходов` varchar(128) NOT NULL,
+  `Количество повторений` varchar(128) NOT NULL,
+  `Количество Вып. в Неделю` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Individual Study`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `individual study`
+--
+
+LOCK TABLES `individual study` WRITE;
+/*!40000 ALTER TABLE `individual study` DISABLE KEYS */;
+INSERT INTO `individual study` VALUES (1,'2','20','5'),(2,'4','15','5');
+/*!40000 ALTER TABLE `individual study` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `invite`
+--
+
+DROP TABLE IF EXISTS `invite`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `invite` (
+  `id_Invite` int NOT NULL AUTO_INCREMENT,
+  `Дата Заявки` varchar(128) NOT NULL,
+  `Цель` varchar(128) NOT NULL,
+  `Дата ответа` varchar(128) NOT NULL,
+  `Причина` varchar(128) NOT NULL,
+  `Принята` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Invite`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `invite`
+--
+
+LOCK TABLES `invite` WRITE;
+/*!40000 ALTER TABLE `invite` DISABLE KEYS */;
+INSERT INTO `invite` VALUES (1,'01.06.22','улучшить мышцы рук и спины','08.06.22','не подходит по телосложению','отказ'),(2,'20.04.22','накачать пресс','12.12.22',' подходит','принята');
+/*!40000 ALTER TABLE `invite` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `plan_stude`
+--
+
+DROP TABLE IF EXISTS `plan_stude`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `plan_stude` (
+  `id_Plan_stude` int NOT NULL AUTO_INCREMENT,
+  `дата начала` varchar(128) NOT NULL,
+  `Дата окончания` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Plan_stude`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `plan_stude`
+--
+
+LOCK TABLES `plan_stude` WRITE;
+/*!40000 ALTER TABLE `plan_stude` DISABLE KEYS */;
+INSERT INTO `plan_stude` VALUES (1,'24.07.22','24.08.22'),(2,'01.06.22','01.07.22');
+/*!40000 ALTER TABLE `plan_stude` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trainers`
+--
+
+DROP TABLE IF EXISTS `trainers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `trainers` (
+  `id_Trainers` int NOT NULL AUTO_INCREMENT,
+  `дата` varchar(128) NOT NULL,
+  `Трудоустройство` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_Trainers`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trainers`
+--
+
+LOCK TABLES `trainers` WRITE;
+/*!40000 ALTER TABLE `trainers` DISABLE KEYS */;
+INSERT INTO `trainers` VALUES (1,'03.05.18','4'),(2,'07.10.19','4');
+/*!40000 ALTER TABLE `trainers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `id_User` int NOT NULL AUTO_INCREMENT,
+  `имя` varchar(128) NOT NULL,
+  `Фамилия` varchar(128) NOT NULL,
+  `Отчество` varchar(128) NOT NULL,
+  `Телефон` varchar(128) NOT NULL,
+  `Пароль` varchar(128) NOT NULL,
+  `Дата Рождения` varchar(128) NOT NULL,
+  `Фото профиля` varchar(128) NOT NULL,
+  `Пол` varchar(128) NOT NULL,
+  `Роль` varchar(128) NOT NULL,
+  PRIMARY KEY (`id_User`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Даниил','Палагин','Вадимович','88005553535','018743','01.12.05','pg','муж.','админ.'),(2,'Тимур','Садретдинов','Ильдусович','89354783344','786134','12.10.04','pg','муж.','тренер'),(3,'Сергей','Островкий','Алексеевич','89267443848','74802','30.09.10','pg','муж.','тренер'),(4,'Нурсултон','Усмонов','Нурлуевич','81256408998','85029','01.01.22','pg','муж.','клиент'),(5,'Юрик','Назиров','Казбекович','87254004541','147867','27.05.05','pg','муж.','клиент');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
